@@ -13,6 +13,7 @@
         <module>model</module>
         <module>web</module>
     </modules>
+    <!--   继承springboot 父项目-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -28,11 +29,11 @@
         <jwt.version>0.11.2</jwt.version>
         <easycaption.verison>1.6.2</easycaption.verison>
         <minio.version>8.2.2</minio.version>
-        <knife4j.version>3.0.3</knife4j.version>
+        <knife4j.version>4.5.0</knife4j.version>
         <aliyun.sms.version>2.0.23</aliyun.sms.version>
         <easy-captcha.verison>1.6.2</easy-captcha.verison>
     </properties>
-    <!--    dependencyManagement 统一管理依赖版本-->
+    <!--    dependencyManagement 统一管理依赖版本  不会下载爆红正常 只能在子模块引入下载-->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -45,16 +46,23 @@
                 <artifactId>model</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.mysql</groupId>-->
+<!--                <artifactId>mysql-connector-j</artifactId>-->
+<!--                <version>${mysql.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>com.github.xiaoymin</groupId>-->
-<!--                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>-->
-<!--                <version>${knife4j.version}</version>-->
-<!--            </dependency>-->
+            <!-- https://mvnrepository.com/artifact/com.github.xiaoymin/knife4j-openapi3-jakarta-spring-boot-starter -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-autoconfigure</artifactId>
