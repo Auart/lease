@@ -17,6 +17,7 @@ public class LoginController {
     @Operation(summary = "获取图形验证码")
     @GetMapping("login/captcha")
     public Result<CaptchaVo> getCaptcha() {
+
         return Result.ok();
     }
 
