@@ -29,12 +29,14 @@ public class PaymentTypeController {
     @Operation(summary = "保存或更新支付方式")
     @PostMapping("saveOrUpdate")
     public Result saveOrUpdatePaymentType(@RequestBody PaymentType paymentType) {
+        paymentTypeService.saveOrUpdate(paymentType);
         return Result.ok();
     }
 
     @Operation(summary = "根据ID删除支付方式")
     @DeleteMapping("deleteById")
     public Result deletePaymentById(@RequestParam Long id) {
+        paymentTypeService.removeById(id);
         return Result.ok();
     }
 
