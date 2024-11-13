@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
  *
  * @author auart
  */
+@Deprecated
 @Component
 public class StringToLeaseStatusConverter  implements Converter<String, LeaseStatus> {
 
