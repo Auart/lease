@@ -36,7 +36,7 @@ public class PaymentTypeController {
     @Operation(summary = "根据ID删除支付方式")
     @DeleteMapping("deleteById")
     public Result deletePaymentById(@RequestParam Long id) {
-        paymentTypeService.removeById(id);
+        paymentTypeService.removeById(id);   //默认执行逻辑删除
         return Result.ok();
     }
 
